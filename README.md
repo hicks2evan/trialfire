@@ -24,7 +24,9 @@ We use npm scripts and [Webpack][] as our build system.
 
    brew install mysql
 
-   brew services start mysql
+Start MySQL
+
+    brew services start mysql
 
 And do secure setup to set the root password and other desired settings:
 
