@@ -22,7 +22,9 @@ We use npm scripts and [Webpack][] as our build system.
 
 2. MySQL: This project runs a MySQL database. To develop locally, install and start MySQL. On a mac with brew:
 
-   brew install mysql
+Install
+
+brew install mysql
 
 Start MySQL
 
