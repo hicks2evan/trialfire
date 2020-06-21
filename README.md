@@ -20,9 +20,10 @@ You will only need to run this command when dependencies change in [package.json
 
 We use npm scripts and [Webpack][] as our build system.
 
-2. [mysql][]: This project runs a mysql database. To develop locally, install and start mysql. On a mac with brew:
+2. MySQL: This project runs a MySQL database. To develop locally, install and start MySQL. On a mac with brew:
 
    brew install mysql
+
    brew services start mysql
 
 And do secure setup to set the root password and other desired settings:
@@ -33,7 +34,7 @@ On Windows: https://dev.mysql.com/doc/refman/8.0/en/windows-installation.html
 
 Once mysql is installed and running, change password in src/main/resources/config/application-dev.yml to your password for local development.
 
-3. [Email][]: This project uses email to send a registration activation link. To send emails in development you need to follow the steps outlined here:
+3. Email: This project uses email to send a registration activation link. To send emails in development you need to follow the steps outlined here:
 
 https://www.jhipster.tech/tips/011_tip_configuring_email_in_jhipster.html#configuring-email-with---gmail-and-more
 
