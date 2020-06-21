@@ -24,7 +24,7 @@ We use npm scripts and [Webpack][] as our build system.
 
 Install
 
-brew install mysql
+    brew install mysql
 
 Start MySQL
 
