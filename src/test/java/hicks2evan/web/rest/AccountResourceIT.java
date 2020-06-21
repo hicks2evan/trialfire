@@ -2,7 +2,6 @@ package hicks2evan.web.rest;
 
 import hicks2evan.TrialfireApp;
 import hicks2evan.config.Constants;
-import hicks2evan.domain.Authority;
 import hicks2evan.domain.User;
 import hicks2evan.repository.AuthorityRepository;
 import hicks2evan.repository.UserRepository;
@@ -14,13 +13,11 @@ import hicks2evan.web.rest.vm.KeyAndPasswordVM;
 import hicks2evan.web.rest.vm.ManagedUserVM;
 import org.apache.commons.lang3.RandomStringUtils;
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
-import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
