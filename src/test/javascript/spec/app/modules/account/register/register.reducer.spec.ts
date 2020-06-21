@@ -74,7 +74,7 @@ describe('Creating account tests', () => {
 
     it('dispatches CREATE_ACCOUNT_PENDING and CREATE_ACCOUNT_FULFILLED actions', async () => {
       const meta = {
-        successMessage: '<strong>Registration saved!</strong> Please check your email for confirmation.'
+        successMessage: 'Registration saved! Please check your email for confirmation.'
       };
 
       const expectedActions = [
