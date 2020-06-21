@@ -1,0 +1,39 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "hicks2evan"
+    },
+    "jhipsterVersion": "6.8.0",
+    "applicationType": "monolith",
+    "baseName": "trialfire",
+    "packageName": "hicks2evan",
+    "packageFolder": "hicks2evan",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "no",
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "mysql",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "maven",
+    "enableSwaggerCodegen": true,
+    "jwtSecretKey": "MTgzNGViZDBkNTE3Yjg4ZGNhZjNmMjk4NTVkYTAxZWQ3MTM3Yzk5Y2YxMTc5YjBjM2UwNGU1OWZmMmIxMWNjYTBkOWUxMjQ4ODI1NTk4OTAyZDgyNjUwYzFlZDRjZjAwMGZlY2Y2OWZiMWViYjgzZTllMjhlNWY2NDg3YzAwNmI=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "react",
+    "clientTheme": "simplex",
+    "clientThemeVariant": "primary",
+    "creationTimestamp": 1592756983851,
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [],
+    "enableTranslation": false,
+    "blueprints": []
+  }
+}
