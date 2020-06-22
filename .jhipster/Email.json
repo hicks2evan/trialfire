@@ -1,0 +1,28 @@
+{
+  "fluentMethods": true,
+  "clientRootFolder": "",
+  "relationships": [
+    {
+      "relationshipName": "trial",
+      "otherEntityName": "trial",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id",
+      "otherEntityRelationshipName": "email"
+    }
+  ],
+  "fields": [
+    {
+      "fieldName": "sentdate",
+      "fieldType": "Instant"
+    }
+  ],
+  "changelogDate": "20200622021631",
+  "dto": "no",
+  "searchEngine": false,
+  "service": "no",
+  "entityTableName": "email",
+  "databaseType": "sql",
+  "readOnly": false,
+  "jpaMetamodelFiltering": false,
+  "pagination": "no"
+}

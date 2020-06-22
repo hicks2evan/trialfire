@@ -1,0 +1,44 @@
+{
+    "fluentMethods": true,
+    "clientRootFolder": "",
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "name",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "price",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "user",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "increasedprice",
+            "fieldType": "Float"
+        },
+        {
+            "fieldName": "startdate",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "enddate",
+            "fieldType": "Instant"
+        }
+    ],
+    "changelogDate": "20200621232633",
+    "dto": "no",
+    "searchEngine": false,
+    "service": "no",
+    "entityTableName": "trial",
+    "databaseType": "sql",
+    "readOnly": false,
+    "jpaMetamodelFiltering": false,
+    "pagination": "no"
+}
