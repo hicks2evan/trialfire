@@ -1,5 +1,6 @@
 package hicks2evan.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import javax.persistence.*;
 
@@ -29,9 +30,6 @@ public class Trial implements Serializable {
     @Column(name = "price")
     private Float price;
 
-    @Column(name = "user")
-    private Integer user;
-
     @Column(name = "increasedprice")
     private Float increasedprice;
 
@@ -40,6 +38,10 @@ public class Trial implements Serializable {
 
     @Column(name = "enddate")
     private Instant enddate;
+
+    @ManyToOne
+    @JsonIgnoreProperties("trials")
+    private User user;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here, do not remove
     public Long getId() {
@@ -89,19 +91,6 @@ public class Trial implements Serializable {
         this.price = price;
     }
 
-    public Integer getUser() {
-        return user;
-    }
-
-    public Trial user(Integer user) {
-        this.user = user;
-        return this;
-    }
-
-    public void setUser(Integer user) {
-        this.user = user;
-    }
-
     public Float getIncreasedprice() {
         return increasedprice;
     }
@@ -140,6 +129,19 @@ public class Trial implements Serializable {
     public void setEnddate(Instant enddate) {
         this.enddate = enddate;
     }
+
+    public User getUser() {
+        return user;
+    }
+
+    public Trial user(User user) {
+        this.user = user;
+        return this;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
+    }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here, do not remove
 
     @Override
@@ -165,7 +167,6 @@ public class Trial implements Serializable {
             ", name='" + getName() + "'" +
             ", status='" + getStatus() + "'" +
             ", price=" + getPrice() +
-            ", user=" + getUser() +
             ", increasedprice=" + getIncreasedprice() +
             ", startdate='" + getStartdate() + "'" +
             ", enddate='" + getEnddate() + "'" +

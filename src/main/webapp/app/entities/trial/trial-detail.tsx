@@ -38,10 +38,6 @@ export const TrialDetail = (props: ITrialDetailProps) => {
           </dt>
           <dd>{trialEntity.price}</dd>
           <dt>
-            <span id="user">User</span>
-          </dt>
-          <dd>{trialEntity.user}</dd>
-          <dt>
             <span id="increasedprice">Increasedprice</span>
           </dt>
           <dd>{trialEntity.increasedprice}</dd>
@@ -57,6 +53,8 @@ export const TrialDetail = (props: ITrialDetailProps) => {
           <dd>
             <TextFormat value={trialEntity.enddate} type="date" format={APP_DATE_FORMAT} />
           </dd>
+          <dt>User</dt>
+          <dd>{trialEntity.user ? trialEntity.user.login : ''}</dd>
         </dl>
         <Button tag={Link} to="/trial" replace color="info">
           <FontAwesomeIcon icon="arrow-left" /> <span className="d-none d-md-inline">Back</span>

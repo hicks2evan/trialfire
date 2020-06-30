@@ -36,10 +36,10 @@ export const Trial = (props: ITrialProps) => {
                 <th>Name</th>
                 <th>Status</th>
                 <th>Price</th>
-                <th>User</th>
                 <th>Increasedprice</th>
                 <th>Startdate</th>
                 <th>Enddate</th>
+                <th>User</th>
                 <th />
               </tr>
             </thead>
@@ -54,7 +54,6 @@ export const Trial = (props: ITrialProps) => {
                   <td>{trial.name}</td>
                   <td>{trial.status}</td>
                   <td>{trial.price}</td>
-                  <td>{trial.user}</td>
                   <td>{trial.increasedprice}</td>
                   <td>
                     <TextFormat type="date" value={trial.startdate} format={APP_DATE_FORMAT} />
@@ -62,6 +61,7 @@ export const Trial = (props: ITrialProps) => {
                   <td>
                     <TextFormat type="date" value={trial.enddate} format={APP_DATE_FORMAT} />
                   </td>
+                  <td>{trial.user ? trial.user.login : ''}</td>
                   <td className="text-right">
                     <div className="btn-group flex-btn-group-container">
                       <Button tag={Link} to={`${match.url}/${trial.id}`} color="info" size="sm">

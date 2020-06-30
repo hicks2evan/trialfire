@@ -7,6 +7,8 @@ import { ICrudGetAction, ICrudGetAllAction, ICrudPutAction } from 'react-jhipste
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { IRootState } from 'app/shared/reducers';
 
+import { IUser } from 'app/shared/model/user.model';
+import { getUsers } from 'app/modules/administration/user-management/user-management.reducer';
 import { getEntity, updateEntity, createEntity, reset } from './trial.reducer';
 import { ITrial } from 'app/shared/model/trial.model';
 import { convertDateTimeFromServer, convertDateTimeToServer, displayDefaultDateTime } from 'app/shared/util/date-utils';
@@ -15,9 +17,10 @@ import { mapIdList } from 'app/shared/util/entity-utils';
 export interface ITrialUpdateProps extends StateProps, DispatchProps, RouteComponentProps<{ id: string }> {}
 
 export const TrialUpdate = (props: ITrialUpdateProps) => {
+  const [userId, setUserId] = useState('0');
   const [isNew, setIsNew] = useState(!props.match.params || !props.match.params.id);
 
-  const { trialEntity, loading, updating } = props;
+  const { trialEntity, users, loading, updating } = props;
 
   const handleClose = () => {
     props.history.push('/trial');
@@ -29,6 +32,8 @@ export const TrialUpdate = (props: ITrialUpdateProps) => {
     } else {
       props.getEntity(props.match.params.id);
     }
+
+    props.getUsers();
   }, []);
 
   useEffect(() => {
@@ -46,6 +51,7 @@ export const TrialUpdate = (props: ITrialUpdateProps) => {
         ...trialEntity,
         ...values
       };
+      entity.user = users[values.user];
 
       if (isNew) {
         props.createEntity(entity);
@@ -93,12 +99,6 @@ export const TrialUpdate = (props: ITrialUpdateProps) => {
                 <AvField id="trial-price" type="string" className="form-control" name="price" />
               </AvGroup>
               <AvGroup>
-                <Label id="userLabel" for="trial-user">
-                  User
-                </Label>
-                <AvField id="trial-user" type="string" className="form-control" name="user" />
-              </AvGroup>
-              <AvGroup>
                 <Label id="increasedpriceLabel" for="trial-increasedprice">
                   Increasedprice
                 </Label>
@@ -130,6 +130,19 @@ export const TrialUpdate = (props: ITrialUpdateProps) => {
                   value={isNew ? displayDefaultDateTime() : convertDateTimeFromServer(props.trialEntity.enddate)}
                 />
               </AvGroup>
+              <AvGroup>
+                <Label for="trial-user">User</Label>
+                <AvInput id="trial-user" type="select" className="form-control" name="user">
+                  <option value="" key="0" />
+                  {users
+                    ? users.map((otherEntity, index) => (
+                        <option value={index} key={otherEntity.id}>
+                          {otherEntity.login}
+                        </option>
+                      ))
+                    : null}
+                </AvInput>
+              </AvGroup>
               <Button tag={Link} id="cancel-save" to="/trial" replace color="info">
                 <FontAwesomeIcon icon="arrow-left" />
                 &nbsp;
@@ -149,6 +162,7 @@ export const TrialUpdate = (props: ITrialUpdateProps) => {
 };
 
 const mapStateToProps = (storeState: IRootState) => ({
+  users: storeState.userManagement.users,
   trialEntity: storeState.trial.entity,
   loading: storeState.trial.loading,
   updating: storeState.trial.updating,
@@ -156,6 +170,7 @@ const mapStateToProps = (storeState: IRootState) => ({
 });
 
 const mapDispatchToProps = {
+  getUsers,
   getEntity,
   updateEntity,
   createEntity,

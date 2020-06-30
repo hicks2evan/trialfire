@@ -25,9 +25,6 @@
             <column name="price" type="${floatType}">
                 <constraints nullable="true" />
             </column>
-            <column name="user" type="integer">
-                <constraints nullable="true" />
-            </column>
             <column name="increasedprice" type="${floatType}">
                 <constraints nullable="true" />
             </column>
@@ -35,6 +32,9 @@
                 <constraints nullable="true" />
             </column>
             <column name="enddate" type="datetime">
+                <constraints nullable="true" />
+            </column>
+            <column name="user_id" type="bigint">
                 <constraints nullable="true" />
             </column>
             <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here, do not remove-->
@@ -65,7 +65,6 @@
             <column name="name" type="string"/>
             <column name="status" type="string"/>
             <column name="price" type="numeric"/>
-            <column name="user" type="numeric"/>
             <column name="increasedprice" type="numeric"/>
             <column name="startdate" type="datetime"/>
             <column name="enddate" type="datetime"/>

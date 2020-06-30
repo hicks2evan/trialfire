@@ -1,7 +1,16 @@
 {
     "fluentMethods": true,
     "clientRootFolder": "",
-    "relationships": [],
+    "relationships": [
+        {
+            "relationshipName": "user",
+            "otherEntityName": "user",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "login",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "trial"
+        }
+    ],
     "fields": [
         {
             "fieldName": "name",
@@ -14,10 +23,6 @@
         {
             "fieldName": "price",
             "fieldType": "Float"
-        },
-        {
-            "fieldName": "user",
-            "fieldType": "Integer"
         },
         {
             "fieldName": "increasedprice",

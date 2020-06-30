@@ -41,9 +41,6 @@ public class TrialResourceIT {
     private static final Float DEFAULT_PRICE = 1F;
     private static final Float UPDATED_PRICE = 2F;
 
-    private static final Integer DEFAULT_USER = 1;
-    private static final Integer UPDATED_USER = 2;
-
     private static final Float DEFAULT_INCREASEDPRICE = 1F;
     private static final Float UPDATED_INCREASEDPRICE = 2F;
 
@@ -75,7 +72,6 @@ public class TrialResourceIT {
             .name(DEFAULT_NAME)
             .status(DEFAULT_STATUS)
             .price(DEFAULT_PRICE)
-            .user(DEFAULT_USER)
             .increasedprice(DEFAULT_INCREASEDPRICE)
             .startdate(DEFAULT_STARTDATE)
             .enddate(DEFAULT_ENDDATE);
@@ -92,7 +88,6 @@ public class TrialResourceIT {
             .name(UPDATED_NAME)
             .status(UPDATED_STATUS)
             .price(UPDATED_PRICE)
-            .user(UPDATED_USER)
             .increasedprice(UPDATED_INCREASEDPRICE)
             .startdate(UPDATED_STARTDATE)
             .enddate(UPDATED_ENDDATE);
@@ -122,7 +117,6 @@ public class TrialResourceIT {
         assertThat(testTrial.getName()).isEqualTo(DEFAULT_NAME);
         assertThat(testTrial.getStatus()).isEqualTo(DEFAULT_STATUS);
         assertThat(testTrial.getPrice()).isEqualTo(DEFAULT_PRICE);
-        assertThat(testTrial.getUser()).isEqualTo(DEFAULT_USER);
         assertThat(testTrial.getIncreasedprice()).isEqualTo(DEFAULT_INCREASEDPRICE);
         assertThat(testTrial.getStartdate()).isEqualTo(DEFAULT_STARTDATE);
         assertThat(testTrial.getEnddate()).isEqualTo(DEFAULT_ENDDATE);
@@ -162,7 +156,6 @@ public class TrialResourceIT {
             .andExpect(jsonPath("$.[*].name").value(hasItem(DEFAULT_NAME)))
             .andExpect(jsonPath("$.[*].status").value(hasItem(DEFAULT_STATUS)))
             .andExpect(jsonPath("$.[*].price").value(hasItem(DEFAULT_PRICE.doubleValue())))
-            .andExpect(jsonPath("$.[*].user").value(hasItem(DEFAULT_USER)))
             .andExpect(jsonPath("$.[*].increasedprice").value(hasItem(DEFAULT_INCREASEDPRICE.doubleValue())))
             .andExpect(jsonPath("$.[*].startdate").value(hasItem(DEFAULT_STARTDATE.toString())))
             .andExpect(jsonPath("$.[*].enddate").value(hasItem(DEFAULT_ENDDATE.toString())));
@@ -182,7 +175,6 @@ public class TrialResourceIT {
             .andExpect(jsonPath("$.name").value(DEFAULT_NAME))
             .andExpect(jsonPath("$.status").value(DEFAULT_STATUS))
             .andExpect(jsonPath("$.price").value(DEFAULT_PRICE.doubleValue()))
-            .andExpect(jsonPath("$.user").value(DEFAULT_USER))
             .andExpect(jsonPath("$.increasedprice").value(DEFAULT_INCREASEDPRICE.doubleValue()))
             .andExpect(jsonPath("$.startdate").value(DEFAULT_STARTDATE.toString()))
             .andExpect(jsonPath("$.enddate").value(DEFAULT_ENDDATE.toString()));
@@ -212,7 +204,6 @@ public class TrialResourceIT {
             .name(UPDATED_NAME)
             .status(UPDATED_STATUS)
             .price(UPDATED_PRICE)
-            .user(UPDATED_USER)
             .increasedprice(UPDATED_INCREASEDPRICE)
             .startdate(UPDATED_STARTDATE)
             .enddate(UPDATED_ENDDATE);
@@ -229,7 +220,6 @@ public class TrialResourceIT {
         assertThat(testTrial.getName()).isEqualTo(UPDATED_NAME);
         assertThat(testTrial.getStatus()).isEqualTo(UPDATED_STATUS);
         assertThat(testTrial.getPrice()).isEqualTo(UPDATED_PRICE);
-        assertThat(testTrial.getUser()).isEqualTo(UPDATED_USER);
         assertThat(testTrial.getIncreasedprice()).isEqualTo(UPDATED_INCREASEDPRICE);
         assertThat(testTrial.getStartdate()).isEqualTo(UPDATED_STARTDATE);
         assertThat(testTrial.getEnddate()).isEqualTo(UPDATED_ENDDATE);
