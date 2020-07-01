@@ -4,10 +4,7 @@ import hicks2evan.domain.User;
 
 import io.github.jhipster.config.JHipsterProperties;
 
-import java.nio.charset.StandardCharsets;
 import java.util.Locale;
-import javax.mail.MessagingException;
-import javax.mail.internet.MimeMessage;
 import com.sendgrid.*;
 import com.sendgrid.helpers.mail.Mail;
 import com.sendgrid.helpers.mail.objects.Content;
@@ -17,9 +14,7 @@ import java.io.IOException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.MessageSource;
-import org.springframework.mail.MailException;
 import org.springframework.mail.javamail.JavaMailSender;
-import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 import org.thymeleaf.context.Context;
