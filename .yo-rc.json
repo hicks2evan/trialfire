@@ -35,6 +35,9 @@
     "otherModules": [],
     "enableTranslation": false,
     "blueprints": [],
-    "lastLiquibaseTimestamp": 1592793691000
+    "lastLiquibaseTimestamp": 1592793691000,
+    "herokuAppName": "trialfire",
+    "herokuDeployType": "git",
+    "herokuJavaVersion": "14"
   }
 }
