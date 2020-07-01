@@ -144,7 +144,7 @@ jhipster:
   #     allow-credentials: true
   #     max-age: 1800
   mail:
-    from: trialfire@localhost
+    from: trialfire@hicks.app
   swagger:
     default-include-pattern: /api/.*
     title: trialfire API
