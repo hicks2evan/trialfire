@@ -46,7 +46,7 @@ describe('Header', () => {
   });
 
   // All tests will go here
-  it('Renders a Header component in dev profile with LoadingBar, Navbar, Nav and dev ribbon.', () => {
+  it('Renders a Header component in dev profile with LoadingBar, Navbar, Nav.', () => {
     const component = wrapper();
     // the created snapshot must be committed to source control
     expect(component).toMatchSnapshot();
@@ -61,8 +61,6 @@ describe('Header', () => {
     expect(nav.find(EntitiesMenu).length).toEqual(1);
 
     expect(nav.find(AccountMenu).length).toEqual(1);
-    const ribbon = component.find('.ribbon.dev');
-    expect(ribbon.length).toEqual(1);
   });
 
   it('Renders a Header component in prod profile with LoadingBar, Navbar, Nav.', () => {
@@ -79,8 +77,6 @@ describe('Header', () => {
     expect(nav.find(EntitiesMenu).length).toEqual(1);
 
     expect(nav.find(AccountMenu).length).toEqual(1);
-    const ribbon = component.find('.ribbon.dev');
-    expect(ribbon.length).toEqual(0);
   });
 
   it('Renders a Header component in prod profile with logged in User', () => {
