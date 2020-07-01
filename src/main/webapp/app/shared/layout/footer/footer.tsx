@@ -8,7 +8,8 @@ const Footer = props => (
   <div className="footer page-content">
     <Row>
       <Col md="12">
-        <p>Your footer</p>
+      <a href="https://github.com/hicks2evan/trialfire">trialfire on github</a> |
+      <a href="https://hicks2evan.github.io/">more on Evan</a>
       </Col>
     </Row>
   </div>

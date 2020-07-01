@@ -26,7 +26,6 @@ a {
   box-sizing: border-box;
   .view-container {
     width: 100%;
-    height: calc(100% - 40px);
     overflow-y: auto;
     overflow-x: hidden;
     padding: 1rem;
