@@ -62,6 +62,7 @@ public class MailService {
             isMultipart, isHtml, toAddress, subject, content);
 
         //Prepare message using sendgrid helpers
+        System.out.println("From " + jHipsterProperties.getMail().getFrom());
         Email from = new Email(jHipsterProperties.getMail().getFrom());
         Email to = new Email(toAddress);
         Content emailContent;
